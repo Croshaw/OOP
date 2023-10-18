@@ -18,6 +18,11 @@ public class Worker extends People implements IWorker {
     }
 
     @Override
+    public String getInfo() {
+        return super.getInfo() + " Должность: %s".formatted(post);
+    }
+
+    @Override
     public void work() {
         System.out.printf("%s работает\n", this.toString());
     }

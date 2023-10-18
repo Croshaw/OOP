@@ -45,6 +45,10 @@ public class People implements IPeople {
         return "%s %s %s".formatted(surname, name.charAt(0), patronymic.charAt(0));
     }
 
+    public String getInfo() {
+        return "Фамилия: %s Имя: %s Отчёство: %s".formatted(surname, name, patronymic);
+    }
+
     @Override
     public Object clone() throws CloneNotSupportedException {
         return new People(surname, name, patronymic);
